@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="forhim.css">
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <main>
+    <!-- 1. Countdown -->
+    <section id="intro" class="screen">
+      <p class="tag">Counting down to</p>
+      <h1>his Special Day <span>is Coming</span></h1>
+      <div class="timer">
+        <div class="box"><b id="d">00</b><small>days</small></div>
+        <div class="box"><b id="h">00</b><small>hours</small></div>
+        <div class="box"><b id="m">00</b><small>min</small></div>
+        <div class="box"><b id="s">00</b><small>sec</small></div>
+      </div>
+      <button class="btn" data-go="letter">Open my gift 🎁</button>
+    </section>
+
+    <!-- 2. Message -->
+    <section id="letter" class="screen hidden">
+      <h2>Happy Birthday</h2>
+      <div class="card"><p id="letterText"></p></div>
+      <button class="btn" data-go="memories">Our memories</button>
+    </section>
+
+    <!-- 3. Photos -->
+    <section id="memories" class="screen hidden">
+      <h2>Our Memories</h2>
+      <div class="gallery">
+        <figure class="polaroid"><img src="photo4.jpeg" alt=""><figcaption>Day one</figcaption></figure>
+        <figure class="polaroid"><img src="photo2.jpeg" alt=""><figcaption>Us again</figcaption></figure>
+        <figure class="polaroid"><img src="photo3.jpeg" alt=""><figcaption>So happy</figcaption></figure>
+        <figure class="polaroid"><img src="photo1.jpeg" alt=""><figcaption>Favorite day</figcaption></figure>
+      </div>
+      <button class="btn" data-go="video">Watch this</button>
+    </section>
+
+    <!-- 4. Video -->
+    <section id="video" class="screen hidden">
+      <h2>A Moment For You</h2>
+      <video id="vid" controls playsinline src="video1.mp4"></video>
+      <button class="btn" data-go="ending">Last thing</button>
+    </section>
+
+    <!-- 5. Ending -->
+    <section id="ending" class="screen hidden">
+      <h2 id="bigText" class="glow"></h2>
+      <p class="thanks">Thank you for being part of my life.<br>I hope this little gift makes your day more beautiful.</p>
+      <p class="forever">Forever yours 💗</p>
+      <button class="btn" id="replay">↺ Replay from start</button>
+    </section>
+  </main>
+
+  <script src="forhimr.js"></script>
+</body>
+</html>
